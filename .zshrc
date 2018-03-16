@@ -60,3 +60,4 @@ vim_fzf () { vim $(fzf); }
 
 # Configure zsh prompt. Listed last to override antigen theme settings
 #PROMPT="> "
+RPROMT=""
