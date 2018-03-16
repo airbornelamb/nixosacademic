@@ -22,7 +22,8 @@ alias mountweb='curlftpfs ftp://legisxmc:agit2R16V4XW@server243.web-hosting.com 
 # Copy ssh key to server
 # type "copykey user@server"
 function copykey {
-    ssh $1 'mkdir -p .ssh && cat >> .ssh/authorized_keys' < ~/.ssh/id_rsa.pub
+  [ -z "$1" ] && echo 'Usage: copykey user@server' && return 1
+  ssh $1 'mkdir -p .ssh && cat >> .ssh/authorized_keys' < ~/.ssh/id_rsa.pub
 }
 
 # ex - archive extractor

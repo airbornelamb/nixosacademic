@@ -27,7 +27,7 @@ antigen bundle <<EOBUNDLES
 EOBUNDLES
 
 # Load the theme
-antigen theme gentoo
+antigen theme maran
 #antigen theme clair
 
 # Tell antigen that you're done
