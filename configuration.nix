@@ -47,6 +47,7 @@
    programs.bash.enableCompletion = true;
    programs.mtr.enable = true;
    programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
+   programs.zsh.enable = true;
 
   # List services that you want to enable:
 
@@ -82,10 +83,10 @@
    users.extraUsers.josh = {
      isNormalUser = true;
      home = "/home/josh";
-     shell = "/bin/zsh";
+     shell = pkgs.zsh;
      uid = 1000;
      description = "Josh Lamb";
-     extraGroups = [ "wheel" ];
+     extraGroups = [ "users" "wheel" "input"];
      initialPassword = "changeme";
    };
 

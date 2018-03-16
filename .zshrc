@@ -1,13 +1,20 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Stops config if this terminal is non-interactive
-[[ -z "$PS1" ]] && return
+
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
+
+# set PATH so it includes fzf and ripgrep bin if it exists
+if [ -d "$HOME/.fzf/bin" ] ; then
+    PATH="$HOME/.fzf/bin:$PATH"
+fi
+
+# Stops config if this terminal is non-interactive
+[[ -z "$PS1" ]] && return
 
 # Default editor
 export EDITOR=vim
