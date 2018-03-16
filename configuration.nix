@@ -83,7 +83,7 @@
    users.extraUsers.josh = {
      isNormalUser = true;
      home = "/home/josh";
-     shell = pkgs.zsh;
+     shell = "${pkgs.zsh}/bin/zsh";
      uid = 1000;
      description = "Josh Lamb";
      extraGroups = [ "users" "wheel" "input"];
