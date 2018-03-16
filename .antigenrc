@@ -1,0 +1,38 @@
+source $HOME/antigen.zsh
+    
+# Load the oh-my-zsh's library
+antigen use oh-my-zsh
+
+antigen bundle <<EOBUNDLES
+    # Bundles from the default repo (robbyrussell's oh-my-zsh)
+    git taskwarrior pip
+
+    # Guess what to install when running an unknown command.
+    command-not-found
+
+    # Helper for extracting different types of archives.
+    extract
+
+    # Syntax highlighting bundle.
+    zsh-users/zsh-syntax-highlighting
+
+    # Substring search.
+    #zsh-users/zsh-history-substring-search
+
+    # Fish-like auto suggestions
+    zsh-users/zsh-autosuggestions
+
+    # Extra zsh completions
+    zsh-users/zsh-completions
+EOBUNDLES
+
+# Load the theme
+#antigen theme gentoo
+antigen theme clair
+
+# Tell antigen that you're done
+antigen apply
+
+# Automatically list directory contents on `cd`.
+auto-ls () { ls; }
+chpwd_functions=( auto-ls $chpwd_functions )

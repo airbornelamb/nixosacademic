@@ -1,0 +1,98 @@
+## ls with color
+alias ls='ls --color=auto'
+
+## Refresh font cache
+alias font-refresh="fc-cache -fv"
+
+## git clone depth 1, who needs to clone full repository if you can clone the top layer only
+alias clone="git clone --depth 1"
+
+## merge Xresources, useful for urxvt & rofi theming
+alias merge="xrdb ~/.Xresources"
+
+alias more=less
+alias f='fzf --preview "head -100 {}"'
+alias clbin="curl -F 'clbin=<-' https://clbin.com"
+alias myip='curl http://checkip.amazonaws.com/; curl ipinfo.io'
+alias wttr='curl wttr.in/49418'
+alias removechars='sed "s,\x1B\[[0-9;]*[a-zA-Z],,g"'
+alias darn='sudo $(history -p \!\!)'
+alias mountweb='curlftpfs ftp://legisxmc:agit2R16V4XW@server243.web-hosting.com /mnt/legitdigital'
+
+# Copy ssh key to server
+# type "copykey user@server"
+function copykey {
+    ssh $1 'mkdir -p .ssh && cat >> .ssh/authorized_keys' < ~/.ssh/id_rsa.pub
+}
+
+# ex - archive extractor
+# usage: ex <file>
+ex ()
+{
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1     ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *)           echo "'$1' cannot be extracted via ex()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
+# cli-notes
+
+export NOTESDIR="$HOME/Sync/notes"
+
+nn() {
+  local note_name="$*"
+  local note_date="`date +%F`"
+  local note_ext="md"  
+  if [[ $note_name == "" ]]
+  then
+    note_name="$note_date.$note_ext"
+  fi
+  mkdir -p $NOTESDIR
+  vim -c 'startinsert' "$NOTESDIR/$note_name"
+}
+
+ns() {
+  local file
+  [ -z "$1" ] && echo "No argument supplied - Enter a term to search" && return 1
+  file="$(rg --files-with-matches --no-ignore --ignore-case --hidden --no-heading --no-messages $1 $NOTESDIR | fzf --preview "head -100 {}")"
+  if [[ -n $file ]]
+  then
+    vim $file
+  fi
+}
+
+nl() {
+  local files
+  files="$(rg --files $NOTESDIR | fzf --preview "head -100 {}")"
+  if [[ -n $files ]]; then
+    vim $files
+  fi
+}
+
+zoteroinstall() {
+  wget https://raw.github.com/smathot/zotero_installer/master/zotero_installer.sh -O /tmp/zotero_installer.sh
+  chmod +x /tmp/zotero_installer.sh
+  /tmp/zotero_installer.sh
+}
+
+symlink() {
+  [ -z "$1" ] && echo "No argument supplied - Enter path for Original file and New file" && return 1
+  ln -sf $1 $2
+}
+
+
+
