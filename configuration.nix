@@ -36,6 +36,7 @@
   # $ nix-env -qaP | grep wget
    environment.systemPackages = with pkgs; [
      wget git curl tmux st zsh p7zip python3 vim xclip parcellite pandoc
+     dialog wicd spaceFM
      openbox obconf openbox-menu slim st rxvt_unicode-with-plugins conky
      numix-gtk-theme adapta-gtk-theme arc-theme clearlooks-phenix
      gtk-engine-murrine gdk_pixbuf cairo librsvg lxappearance
