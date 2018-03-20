@@ -22,8 +22,8 @@
   networking.hostName = "nixos"; # Define your hostname.
   networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   
-  # hardware.pulseaudio.enable = true;
-  # virtualisation.virtualbox.host.enable = true;
+  hardware.pulseaudio.enable = true;
+  virtualisation.virtualbox.host.enable = true;
 
   # Select internationalisation properties.
    i18n = {
@@ -38,12 +38,13 @@
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
    environment.systemPackages = with pkgs; [
-     wget git curl tmux st zsh p7zip python3 vim xclip parcellite pandoc
-     dialog wicd spaceFM cifs-utils sakura geany sshfs virtualbox zotero
-     openbox obconf openbox-menu slim st rxvt_unicode-with-plugins conky
+     wget git curl tmux zsh p7zip python3 vim xclip parcellite pandoc
+     sakura st rxvt_unicode-with-plugins conky
+     geany mousepad sshfs cifs-utils virtualbox zotero firefox
+     openbox obconf openbox-menu slim
      numix-gtk-theme adapta-gtk-theme arc-theme clearlooks-phenix
      gtk-engine-murrine gdk_pixbuf cairo librsvg lxappearance
-     firefox fira gohufont hack-font font-awesome-ttf liberation_ttf
+     fira gohufont hack-font font-awesome-ttf liberation_ttf
      xfce.thunar xfce.thunar-archive-plugin xfce.thunar_volman
    ];
 
