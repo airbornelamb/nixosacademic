@@ -4,6 +4,11 @@ Bootstrap Nixos setup for academic writing on a new machine
 ### Initial NixOs install
 
 ```bash
+# Connect to WiFi
+wpa_passphrase WIFISSID PASSWORD > /etc/wpa_supplicant.conf
+systemctl restart wpa_supplicant.service
+
+# Partition and format disks
 cfdisk /dev/sda
   # create a new gpt filesystem
   # create 1M partition /dev/sda1 of type "bios boot"
