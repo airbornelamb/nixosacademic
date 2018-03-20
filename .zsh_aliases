@@ -85,10 +85,12 @@ nl() {
 }
 
 zoteroinstall() {
-  wget https://raw.github.com/smathot/zotero_installer/master/zotero_installer.sh -O /tmp/zotero_installer.sh
+  wget https://raw.github.com/smathot/zotero_installer/master/zotero_installer.sh -O /tmp/zot
+  tail -n +2 /tmp/zot > /tmp/zotero_installer.sh
   chmod +x /tmp/zotero_installer.sh
   /tmp/zotero_installer.sh
 }
+
 
 symlink() {
   [ -z "$1" ] && echo "No argument supplied - Enter path for Original file and New file" && return 1
