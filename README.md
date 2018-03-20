@@ -1,6 +1,8 @@
 # nixosacademic
 Bootstrap Nixos setup for academic writing on a new machine
 
+![nixosacademic preview](https://raw.githubusercontent.com/airbornelamb/nixosacademic/master/preview.png)
+
 ### Initial NixOs install
 
 ```bash
