@@ -105,7 +105,7 @@ mountmac() {
     sudo mkdir -p $mntpoint
     sudo chown -R $USER $mntpoint
   fi
-  sudo mount -t cifs //$macip/$macshare $mntpoint -o username=$macuser,password=$macpass,nounix,sec=ntlmssp
+  sudo mount -t cifs //$macip/$macshare $mntpoint -o username=$macuser,password=$macpass,nounix,sec=ntlmssp,rw,iocharset=utf8,file_mode=0777,dir_mode=0777
   cd $mntpoint
 } 
 
