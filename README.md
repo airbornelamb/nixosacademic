@@ -1,5 +1,5 @@
 # nixosacademic
-Bootstrap Nixos setup for academic writing on a new machine
+Bootstrap Nixos setup for academic writing on a new machine using Vim, Zotero, Urxvt, Pandoc
 
 ![nixosacademic preview](https://raw.githubusercontent.com/airbornelamb/nixosacademic/master/preview.png)
 
@@ -34,3 +34,8 @@ cp -r nixosacademic-master/. .
 ```
 
 after this finishes you must reopen the shell and let it do it's thing, then logout and login again
+
+To install zotero, open a terminal and type
+```
+zoteroinstall
+```
