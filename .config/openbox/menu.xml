@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
 	<menu id="root-menu" label="Openbox 3">
+		<item label="Geany Editor">
+			<action name="Execute">
+				<execute>geany</execute>
+			</action>
+		</item>
+		<item label="Thunar">
+			<action name="Execute">
+				<execute>thunar</execute>
+			</action>
+		</item>
 		<item label="Firefox">
 			<action name="Execute">
 				<execute>firefox</execute>
@@ -16,9 +26,24 @@
 				<execute>st</execute>
 			</action>
 		</item>
+		<item label="sakura terminal">
+			<action name="Execute">
+				<execute>sakura</execute>
+			</action>
+		</item>
 		<item label="zotero">
 			<action name="Execute">
 				<execute>zotero</execute>
+			</action>
+		</item>
+		<item label="VirtualBox">
+			<action name="Execute">
+				<execute>VirtualBox</execute>
+			</action>
+		</item>
+		<item label="macOS">
+			<action name="Execute">
+				<execute>VBoxManage startvm "macOS" --type separate</execute>
 			</action>
 		</item>
 		<separator/>
