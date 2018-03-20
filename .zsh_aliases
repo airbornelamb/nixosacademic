@@ -95,5 +95,17 @@ symlink() {
   ln -sf $1 $2
 }
 
-
+mountmac() {
+  local macuser="josh"
+  local macpass="changeme"
+  local macip="192.168.56.101"
+  local macshare="Downloads"
+  local mntpoint="/mnt/mac"
+  if [ -d $mntpoint ] ; then
+    sudo mkdir -p $mntpoint
+    sudo chown -R $USER $mntpoint
+  fi
+  sudo mount -t cifs //$macip/$macshare $mntpoint -o username=$macuser,password=$macpass,nounix,sec=ntlmssp
+  cd $mntpoint
+} 
 
