@@ -21,6 +21,9 @@
 
   networking.hostName = "nixos"; # Define your hostname.
   networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  
+  # hardware.pulseaudio.enable = true;
+  # virtualisation.virtualbox.host.enable = true;
 
   # Select internationalisation properties.
    i18n = {
@@ -36,11 +39,12 @@
   # $ nix-env -qaP | grep wget
    environment.systemPackages = with pkgs; [
      wget git curl tmux st zsh p7zip python3 vim xclip parcellite pandoc
-     dialog wicd spaceFM
+     dialog wicd spaceFM cifs-utils sakura geany sshfs virtualbox
      openbox obconf openbox-menu slim st rxvt_unicode-with-plugins conky
      numix-gtk-theme adapta-gtk-theme arc-theme clearlooks-phenix
      gtk-engine-murrine gdk_pixbuf cairo librsvg lxappearance
      firefox fira gohufont hack-font font-awesome-ttf liberation_ttf
+     xfce.thunar xfce.thunar-archive-plugin xfce.thunar_volman
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
