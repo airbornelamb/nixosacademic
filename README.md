@@ -34,8 +34,3 @@ cp -r nixosacademic-master/. .
 ```
 
 after this finishes you must reopen the shell and let it do it's thing, then logout and login again
-
-To install zotero, open a terminal and type
-```
-zoteroinstall
-```
