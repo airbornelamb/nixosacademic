@@ -3,32 +3,33 @@ source $HOME/antigen.zsh
 # Load the oh-my-zsh's library
 antigen use oh-my-zsh
 
-antigen bundle <<EOBUNDLES
-    # Bundles from the default repo (robbyrussell's oh-my-zsh)
-    git taskwarrior pip
+antigen bundle git
+antigen bundle sudo
+#antigen bundle taskwarrior
+#antigen bundle pip
 
-    # Guess what to install when running an unknown command.
-    command-not-found
+# Guess what to install when running an unknown command.
+antigen bundle command-not-found
 
-    # Helper for extracting different types of archives.
-    extract
+# Helper for extracting different types of archives.
+antigen bundle extract
 
-    # Syntax highlighting bundle.
-    zsh-users/zsh-syntax-highlighting
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
 
-    # Substring search.
-    #zsh-users/zsh-history-substring-search
+# Substring search.
+antigen bundle zsh-users/zsh-history-substring-search
 
-    # Fish-like auto suggestions
-    zsh-users/zsh-autosuggestions
+# Fish-like auto suggestions
+antigen bundle zsh-users/zsh-autosuggestions
 
-    # Extra zsh completions
-    zsh-users/zsh-completions
-EOBUNDLES
+# Extra zsh completions
+antigen bundle zsh-users/zsh-completions
+
 
 # Load the theme
-antigen theme maran
-#antigen theme clair
+#antigen theme gentoo
+antigen theme clair
 
 # Tell antigen that you're done
 antigen apply
