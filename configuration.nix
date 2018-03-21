@@ -42,7 +42,7 @@
      python3 python36Packages.pip python36Packages.setuptools python36Packages.wheel
      xclip parcellite pandoc cabal-install
      sakura st rxvt_unicode-with-plugins conky
-     geany mousepad sshfs cifs-utils virtualbox zotero firefox
+     geany sshfs cifs-utils virtualbox zotero firefox
      openbox obconf openbox-menu slim
      numix-gtk-theme adapta-gtk-theme arc-theme clearlooks-phenix
      gtk-engine-murrine gdk_pixbuf cairo librsvg lxappearance
