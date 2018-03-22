@@ -39,7 +39,8 @@
   # $ nix-env -qaP | grep wget
    environment.systemPackages = with pkgs; [
      wget git curl aria tmux zsh p7zip vim zip unzip python3Full
-     xclip parcellite pandoc cabal-install
+     xclip parcellite 
+     haskellPackages.pandoc haskellPackages.pandoc-citeproc
      sakura st rxvt_unicode-with-plugins conky
      geany sshfs cifs-utils virtualbox zotero firefox
      openbox obconf openbox-menu slim
