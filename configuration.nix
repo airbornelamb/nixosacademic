@@ -43,7 +43,7 @@
      haskellPackages.pandoc haskellPackages.pandoc-citeproc
      sakura st rxvt_unicode-with-plugins conky
      geany sshfs cifs-utils virtualbox zotero firefox
-     openbox obconf openbox-menu slim
+     openbox obconf openbox-menu slim docker
      numix-gtk-theme adapta-gtk-theme arc-theme clearlooks-phenix
      gtk-engine-murrine gdk_pixbuf cairo librsvg lxappearance
      fira gohufont hack-font font-awesome-ttf liberation_ttf
