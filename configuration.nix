@@ -38,7 +38,7 @@
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
    environment.systemPackages = with pkgs; [
-     wget git curl tmux zsh p7zip vim zip unzip python3Full
+     wget git curl aria tmux zsh p7zip vim zip unzip python3Full
      xclip parcellite pandoc cabal-install
      sakura st rxvt_unicode-with-plugins conky
      geany sshfs cifs-utils virtualbox zotero firefox
