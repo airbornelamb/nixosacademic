@@ -31,6 +31,11 @@
 				<execute>st</execute>
 			</action>
 		</item>
+		<item label="st + tmux">
+			<action name="Execute">
+				<execute>st -e tmux</execute>
+			</action>
+		</item>
 		<item label="sakura terminal">
 			<action name="Execute">
 				<execute>sakura</execute>
