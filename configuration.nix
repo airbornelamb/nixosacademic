@@ -96,7 +96,7 @@
      shell = "${pkgs.zsh}/bin/zsh";
      uid = 1000;
      description = "Josh Lamb";
-     extraGroups = [ "users" "wheel" "input"];
+     extraGroups = [ "users" "wheel" "input" "docker" "vboxusers" "audio"];
      initialPassword = "changeme";
    };
 
