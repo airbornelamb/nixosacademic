@@ -44,9 +44,9 @@
      sakura st rxvt_unicode-with-plugins conky
      geany sshfs cifs-utils virtualbox zotero firefox
      openbox obconf openbox-menu slim docker docker_compose
-     numix-gtk-theme adapta-gtk-theme arc-theme clearlooks-phenix
+     numix-gtk-theme numix-icon-theme papirus-icon-theme
      gtk-engine-murrine gdk_pixbuf cairo librsvg lxappearance
-     fira gohufont hack-font font-awesome-ttf liberation_ttf
+     fira gohufont roboto hack-font font-awesome-ttf liberation_ttf
      xfce.thunar xfce.thunar-archive-plugin xfce.thunar_volman
      xfce.mousepad
    ];
