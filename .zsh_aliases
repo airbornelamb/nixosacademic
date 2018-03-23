@@ -17,7 +17,7 @@ alias myip='curl http://checkip.amazonaws.com/; curl ipinfo.io'
 alias wttr='curl wttr.in/49418'
 alias removechars='sed "s,\x1B\[[0-9;]*[a-zA-Z],,g"'
 alias darn='sudo $(history -p \!\!)'
-alias mountweb='curlftpfs ftp://legisxmc:agit2R16V4XW@server243.web-hosting.com /mnt/legitdigital'
+alias listgroups='cut -d: -f1 /etc/group'
 
 # Copy ssh key to server
 # type "copykey user@server"
