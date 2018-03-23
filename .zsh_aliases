@@ -8,7 +8,7 @@ alias font-refresh="fc-cache -fv"
 alias clone="git clone --depth 1"
 
 ## merge Xresources, useful for urxvt & rofi theming
-alias merge="xrdb ~/.Xresources"
+alias mergex="xrdb ~/.Xresources"
 
 alias more=less
 alias f='fzf --preview "head -100 {}"'
