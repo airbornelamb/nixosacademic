@@ -22,8 +22,9 @@
   networking.hostName = "nixos"; # Define your hostname.
   networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   
-  hardware.pulseaudio.enable = true;
-  virtualisation.virtualbox.host.enable = true;
+  #hardware.pulseaudio.enable = true;
+  #virtualisation.virtualbox.host.enable = true;
+  #virtualisation.docker.enable = true;
 
   # Select internationalisation properties.
    i18n = {
