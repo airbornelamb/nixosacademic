@@ -48,7 +48,7 @@
      gtk-engine-murrine gdk_pixbuf cairo librsvg lxappearance
      fira gohufont roboto hack-font font-awesome-ttf liberation_ttf
      xfce.thunar xfce.thunar-archive-plugin xfce.thunar_volman
-     xfce.mousepad
+     xfce.mousepad xfce.exo
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
