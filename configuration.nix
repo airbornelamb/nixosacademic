@@ -22,6 +22,7 @@
   networking.hostName = "nixos"; # Define your hostname.
   networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   
+  #sound.enable = true;
   #hardware.pulseaudio.enable = true;
   #virtualisation.virtualbox.host.enable = true;
   #virtualisation.docker.enable = true;
@@ -104,7 +105,7 @@
   # compatible, in order to avoid breaking some software such as database
   # servers. You should change this only after NixOS release notes say you
   # should.
-  system.stateVersion = "17.09"; # Did you read the comment?
+  system.stateVersion = "18.09"; # Did you read the comment?
 
 }
 
