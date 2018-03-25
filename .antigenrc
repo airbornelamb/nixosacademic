@@ -28,8 +28,8 @@ antigen bundle zsh-users/zsh-completions
 
 
 # Load the theme
-#antigen theme gentoo
-antigen theme clair
+antigen theme gentoo
+#antigen theme clair
 
 # Tell antigen that you're done
 antigen apply
